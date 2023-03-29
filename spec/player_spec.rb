@@ -26,13 +26,13 @@ RSpec.describe Player do
     expect(player.monthly_cost).to eq(1000000)
   end
 
-  xit 'has a contract length' do
+  it 'has a contract length' do
     player = Player.new("Michael Palledorous" , 1000000, 36)
 
     expect(player.contract_length).to eq(36)
   end
 
-  xit 'has a total cost' do
+  it 'has a total cost' do
     player = Player.new("Michael Palledorous" , 1000000, 36)
 
     expect(player.total_cost).to eq(36000000)
