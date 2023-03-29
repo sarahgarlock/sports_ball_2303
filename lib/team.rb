@@ -3,6 +3,8 @@ class Team
   def initialize(team, city)
     @roster = []
     @player_count = 0
+    @long_term_players = []
+    @short_term_players = []
   end
 
   def add_player(player)
@@ -10,5 +12,17 @@ class Team
     @player_count += 1
   end
 
+  def long_term_players
+    roster.select do
+      binding.pry
+     contract_length > 24
+    end
+  end
+
+  def short_term_players
+    roster.select do
+      player.contract_length <= 24
+    end
+  end
 
 end
