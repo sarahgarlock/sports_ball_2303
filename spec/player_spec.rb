@@ -8,13 +8,13 @@ RSpec.describe Player do
     expect(player).to be_a Player
   end
 
-  xit 'has a first name' do
+  it 'has a first name' do
     player = Player.new("Michael Palledorous" , 1000000, 36)
 
     expect(player.first_name).to eq("Michael")
   end
 
-  xit 'has a last name' do
+  it 'has a last name' do
     player = Player.new("Michael Palledorous" , 1000000, 36)
 
     expect(player.last_name).to eq("Palledorous")
